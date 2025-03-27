@@ -14,8 +14,7 @@ interface State {
   localCode: string;
 }
 
-export const useCustomizeThemeStore = defineStore({
-  id: "customizeTheme",
+export const useCustomizeThemeStore = defineStore("customizeTheme",{
   state: (): State => ({
     miniSidebar: false,
     darkTheme: false,

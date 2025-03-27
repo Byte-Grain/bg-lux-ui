@@ -5,8 +5,8 @@ interface Message {
     content: string;
     role: "user" | "assistant" | "system";
 }
-export const useChatHistoryStore = defineStore({
-    id: "chatHistory",
+// 使用新的defineStore语法，避免使用已弃用的对象语法
+export const useChatHistoryStore = defineStore('chatHistory', {
     state: () => ({
         activeChatMenuId: 1,
         chatMenus: [
@@ -89,7 +89,5 @@ export const useChatHistoryStore = defineStore({
                 history.messages.push(message);
             }
         }
-
-
     },
 });
