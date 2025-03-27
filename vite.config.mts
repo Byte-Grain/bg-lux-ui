@@ -37,13 +37,19 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
-    proxy: {
-      "/sdApi": {
-        target: "http://me.yunrobot.cn:7860",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/sdApi/, ""),
-      },
-    },
+    // proxy: {
+    //   "/sdApi": {
+    //     target: "http://me.yunrobot.cn:7860",
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/sdApi/, ""),
+    //   },
+    // },
+  },
+  build: {
+    outDir: "dist",
+    minify: true,
+    chunkSizeWarningLimit: 1000,
+    sourcemap: false
   },
   css: {
     preprocessorOptions: {

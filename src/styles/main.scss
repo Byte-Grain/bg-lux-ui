@@ -1,15 +1,13 @@
+// @use "vuetify/variables";
+@use "./variables" as *;
+@use 'vuetify/styles' as *;
+// enforce font globally
+@use "./override" as *;
+@use "./common/gradients.scss" as *;
+@use "./common/animation.scss" as *;
+@use "./common/beautify.scss" as *;
+@use './pages/editor' as *;
 // tailwindcss
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-// enforce font globally
-// @use "vuetify/variables";
-@import "./variables";
-@import 'vuetify/styles';
-@import "./override";
-@import "./common/gradients.scss";
-@import "./common/animation.scss";
-@import "./common/beautify.scss";
-
-@import './pages/editor';
